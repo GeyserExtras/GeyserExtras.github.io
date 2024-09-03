@@ -1,18 +1,69 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+:root {
+  --ifm-background-image-url: url('/img/hero.png');
+}
+
+[data-theme='dark'] {
+  --ifm-background-image-url: url('/img/hero.png') !important;
+}
 
 .heroBanner {
-  padding: 4rem 0;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  height: calc(100vh - 60px);
   text-align: center;
   position: relative;
   overflow: hidden;
+  color: var(--ifm-font-color-base);
+  background-color: var(--ifm-background-color);
+  background-image: var(--ifm-background-image-url);
+}
+
+.heroContent {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100%;
+}
+
+.heroImage {
+  width: 200px;
+  height: auto;
+}
+
+.heroImageBackgroundBlur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: 40%;
+  left: 50%;
+  width: 80vh;
+  filter: blur(1.5rem);
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  z-index: -1;
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
+      padding: 2rem;
+  }
+}
+@media screen and (max-width: 996px) {
+  .heroBanner {
     padding: 2rem;
+  }
+}
+
+.textSection {
+  color: #fff;
+}
+
+@media screen and (max-width: 410px) {
+  .textSection h1 {
+      font-size: var(--ifm-h1-font-size);
   }
 }
 

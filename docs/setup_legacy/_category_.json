@@ -1,0 +1,10 @@
+{
+    "position": 2.5,
+    "label": "Legacy Setup (v1.0)",
+    "collapsible": true,
+    "collapsed": false,
+    "link": {
+      "type": "doc",
+      "id": "index"
+    }
+  }

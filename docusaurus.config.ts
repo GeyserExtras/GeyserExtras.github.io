@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'GeyserExtras',
+  tagline: 'A plugin which attempts to unify features for Bedrock Edition players on Java Edition Servers with GeyserMC, aswell as other handy features for Bedrock Players.',
   favicon: 'img/favicon.ico',
 
   url: 'https://geyserextras.github.io', // Your website URL
@@ -16,9 +16,6 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -30,10 +27,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/GeyserExtras/GeyserExtras.github.io/',
         },
         blog: {
           showReadingTime: true,
@@ -41,11 +36,8 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
+            'https://github.com/GeyserExtras/GeyserExtras.github.io/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -58,12 +50,14 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+      defaultMode: 'dark'
+    },
+    image: 'img/logo.png',
     navbar: {
-      title: 'My Site',
+      title: 'GeyserExtras',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'GeyserExtras',
         src: 'img/logo.svg',
       },
       items: [
@@ -71,13 +65,18 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          to: 'blog',
+          position: 'left',
+          label: 'Blog',
+        },
+        {
+          href: 'https://github.com/GeyserExtras/GeyserExtras/',
           position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },
@@ -85,11 +84,19 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Downloads',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Modrinth',
+              href: 'https://modrinth.com/plugin/geyserextras/',
+            },
+            {
+              label: 'Hangar',
+              href: 'https://hangar.papermc.io/GeyserExtras/GeyserExtras/',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/GeyserExtras/GeyserExtras/',
             },
           ],
         },
@@ -97,34 +104,13 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://discord.gg/2FfuShKQgy',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} LetsGoAway. Not affiliated with the GeyserMC project. Site built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
