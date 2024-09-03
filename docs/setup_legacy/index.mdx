@@ -36,3 +36,111 @@ under the `plugins/` folder in both your proxy and your backend.
 5. Restart both your proxy and your backend.
 
 6. Done! The plugin should now work.
+
+# Config
+
+> If Geyser-Spigot is detected, all required config changes will be automatically applied.
+# Java Parity
+
+## `enable-custom-cooldown`
+### **Requires `show-cooldown: "false"` in Geyser's config.**
+#### Values: `true` | `false`
+#### Default: `true`
+Enable the custom cooldown.
+
+## `enable-java-only-block-placement`
+### Requires `disable-bedrock-scaffolding: true` in Geyser's config for forward block placements.
+#### Values: `true` | `false`
+#### Default: `false`
+Forces block placements to not be hold-bridgable/scaffold-bridgeable.
+
+
+# Fixes
+
+## `enable-block-ghosting-fix`
+#### Values: `true` | `false`
+#### Default: `false`
+Updates the block at the player's line of sight every tick to remove ghost blocks.
+
+## `enable-knockback-attack-sprint-fix`
+#### Values: `true` | `false`
+#### Default: `true`
+Enables the Knockback Attack Sprint fix.
+
+In Java, when you execute a Knockback attack, the player stops sprinting for one tick.
+The workaround for Bedrock tricks the client into having no hunger for a tick, however this temporarily makes the hunger bar look empty.
+
+# Features
+
+## `auto-reconnect`
+#### Values: `true` | `false`
+#### Default: `true`
+When the server closes or Geyser reloads, reconnect all Bedrock Players to the server using `external-address` and `external-port`.
+
+## `external-address`
+#### Values: Any valid IP or Domain Address
+#### Default: `"mc.exampleaddress.net"`
+This is the external Bedrock address players connect to via WAN, NOT LAN/localhost.
+**You should set this to the address you give to your players.**
+
+## `external-port`
+#### Values: Any whole number from 0-65535
+#### Default: `19132`
+This is the external Bedrock port players connect to via WAN, NOT LAN/localhost.
+**You should set this to the port you give to your players.**
+
+## `enable-skin-saving`
+#### Values: `true` | `false`
+#### Default: `false`
+Enables downloading of Bedrock Player skins.
+> Please note that this is only the skin that Floodgate converts to the Java model format, meaning that some marketplace skins like 128x128 skins, character creator skins or even some classic skins with weird geometry may not look 100% identical or may look lower resolution.
+
+# Quick Menu
+## `quick-menu-actions`
+
+The actions that will show up in the Quick-Menu. Quick-Menu requires the plugin version of Geyser.
+
+Actions are formatted as shown below,
+
+`{title} >> {command}`
+
+Commands are executed as the player.
+
+## Available Placeholders
+
+## %player_name% 
+The name that is the Java Username of the player. For example: `.Geyser_Extras`
+If the player is linked the linked Java account's name is used.
+
+## %xbox_username%
+The username that the Bedrock player has. 
+
+For example: `Geyser Extras`
+
+## %player_device%
+#### Possible values: `Android` | `iOS` | `Amazon` | `Windows Phone` | `Gear VR` | `Hololens` | `Windows` | `macOS` | `Apple TV` | `PlayStation` | `Switch` | `Xbox` | `Dedicated` | `Unknown`
+The device the player is using currently.
+
+## %player_platform%
+#### Possible values: `Console` | `Mobile` | `PC` | `VR` | `Unknown`
+The platform the player is using currently.
+
+## %player_inputtype%
+#### Possible values: `Keyboard` | `Touch` | `Controller` | `VR` | `Unknown`
+The input type the player is using.
+
+## %player_uiprofile%
+#### Possible values: `Classic` | `Pocket`
+The UI Profile the player is using.
+
+#### Default: 
+```yml
+quick-menu-actions:
+  - "Swap Items with Off-hand >> /geyser offhand"
+  - "Toggle Tooltips >> /geyser tooltips"
+  - "Open GeyserExtras Menu >> /ge"
+  - "Open Advancements >> /geyser advancements"
+  - "Open Statistics >> /geyser statistics"
+  - "Player List >> /playerlist"
+  - "Platform List >> /platformlist"
+```
