@@ -10,32 +10,31 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Parity Features',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        GeyserExtras contains many quality of life improvements to make gameplay feel as similar to
+        the Java experience as possible.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Helpful Features',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+      With features like Resource Pack Loading, Action remapping, and Emote Chat,
+      players on both sides can have a seamless gameplay experience.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Fixes and Workarounds',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Workarounds to issues that have been in Geyser for a while or wont be fixed by GeyserMC.
       </>
     ),
   },

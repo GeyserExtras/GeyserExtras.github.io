@@ -95,6 +95,10 @@ const config: Config = {
               href: 'https://hangar.papermc.io/GeyserExtras/GeyserExtras/',
             },
             {
+              label: 'Aternos',
+              href: 'https://aternos.org/addons/a/modrinthbukkit/kOfJBurB'
+            },
+            {
               label: 'GitHub',
               href: 'https://github.com/GeyserExtras/GeyserExtras/',
             },

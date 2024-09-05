@@ -1,0 +1,62 @@
+---
+sidebar_position: 2
+title: Installing GeyserExtras
+hide_table_of_contents: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Installing GeyserExtras
+:::info
+You can find downloads for GeyserExtras at the footer of the page.
+:::
+<Tabs>
+    <TabItem value="Standalone">
+    :::info
+    This is the recommended way to install GeyserExtras, and has the most feature compatibility.
+    :::
+    :::note
+    You do not need to also have Geyser installed on your backend server.
+    :::
+    # Instructions
+
+    1. Start by setting up [Geyser-Standalone](https://geysermc.org/wiki/geyser/setup#general-setup--configuration).
+
+    2. Once you have done that, locate the `extensions/` folder in your Geyser instance folder, and place the `GeyserExtras.jar` in it.
+
+    3. Now, run Geyser-Standalone, and the extension should run!
+
+    
+    # Floodgate Setup (optional)
+    :::info
+    This is recommended if you are using a modded server, and would like to use Floodgate with Geyser-Extras.
+    :::
+    1. [Install Floodgate](https://geysermc.org/wiki/floodgate/setup) on your backend server, and copy the `key.pem` file from the root of Floodgate's plugin folder to the root of your Geyser-Standalone instance's folder.
+    2. Change `auth-type` to `floodgate` in Geyser-Standalone's `config.yml`.
+    3. Restart your server, and you should now login with your Bedrock Edition account!
+    </TabItem>
+
+
+    <TabItem value="Extension">
+    :::warning
+    GeyserExtras will not run as a Geyser Extension when using Modded platforms.
+    
+    This includes Forge, Fabric and Neoforge. Please use **Standalone** instead.
+    :::
+    1. Locate the `extensions/` folder in your Geyser plugin folder, and place the `GeyserExtras.jar` in it.
+
+    2. Now, start your server, and the extension should run!
+    </TabItem>
+
+
+    <TabItem value="Run as a Plugin">
+    :::note
+    Currently, native plugin loading only works on Spigot/Paper, Velocity, and Bungeecord/Waterfall platforms.
+    :::
+    1. [Setup Geyser](https://geysermc.org/wiki/geyser/setup?host=self) for your platform.
+    2. Place the `GeyserExtras.jar` in the `plugins/` folder of your server.
+    3. Now, start your server, and the extension should run!
+    </TabItem>
+</Tabs>
