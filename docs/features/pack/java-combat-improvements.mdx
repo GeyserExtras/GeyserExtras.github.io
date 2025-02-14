@@ -1,0 +1,47 @@
+---
+sidebar_position: 1
+title: "Java Edition Combat Improvements"
+description: "Sounds and Textures"
+---
+import ReactPlayer from 'react-player'
+import combatsoundsvideo from './assets/combatsounds.mp4'
+
+
+# Java Edition Combat Improvements
+
+## Configuration
+
+<details>
+<summary>🗎 GE Config (`config.yml`)</summary>
+
+```yaml
+# Enable the Java Edition styled cooldown.
+enable-custom-cooldown: true
+
+# Enable the Java Edition combat sounds.
+enable-java-combat-sounds: true
+```
+</details>
+
+
+<details>
+<summary>👤&#xfe0e; GE Menu Preferences (`preferences/default.json`)</summary>
+
+</details>
+
+
+
+
+## Attack Indicator
+The texture used in the Java Edition of Minecraft has been ported to Bedrock Edition in GeyserExtras.
+
+## Combat Sounds
+The sounds used for combat in the Java Edition of Minecraft have also been ported.
+
+## Combat Particles
+The particles used in the Java Edition of Minecraft are from the [GeyserOptionalPack by GeyserMC](https://geysermc.org/wiki/other/geyseroptionalpack) of which GeyserExtras automatically downloads and applies when Bedrock Edition players join your server.
+
+## Showcase
+Below is a video with both the Attack Indicator and the Combat Sounds enabled.
+
+<ReactPlayer className='video-player' controls url={combatsoundsvideo}> </ReactPlayer>

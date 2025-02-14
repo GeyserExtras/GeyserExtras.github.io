@@ -33,7 +33,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`GeyserExtras`}
-      description="Description will go into a meta tag in <head />">
+      description="A GeyserMC extension which attempts to unify features for Bedrock Edition players on Java Edition Servers.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
