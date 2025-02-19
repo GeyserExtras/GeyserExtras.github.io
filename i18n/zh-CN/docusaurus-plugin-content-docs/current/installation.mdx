@@ -1,0 +1,91 @@
+---
+sidebar_position: 2
+title: 安装 GeyserExtras
+hide_table_of_contents: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Admonition from '@theme/Admonition';
+
+# 安装 GeyserExtras
+
+<Tabs>
+    <TabItem value="Run as a Plugin">
+        :::warning 支持的平台
+            - BungeeCord
+            - Paper
+            - Purpur
+            - Spigot
+            - Velocity
+            - Waterfall
+
+        **这是安装 GeyserExtras 的推荐方式，具有最多的功能兼容性。**
+        :::
+        <Admonition type="tip" icon="&#x1f4e5;&#xfe0e;" title=" 下载">
+            - [**Modrinth**](https://modrinth.com/plugin/geyserextras/versions)
+            - [**Hangar (仅限 PaperMC)**](https://modrinth.com/plugin/geyserextras/versions)
+        </Admonition>
+        1. 为你的平台 [设置 Geyser](https://geysermc.org/wiki/geyser/setup?host=self)。
+        2. 将 `GeyserExtras-Platform.jar` 放入你的服务器的 `plugins/` 文件夹中。
+        3. 现在，启动你的服务器，扩展应该就可以运行了！
+    </TabItem>
+
+    <TabItem value="Standalone">
+        <Admonition type="tip" icon="&#x1f4e5;&#xfe0e;" title=" 下载">
+            - [**GitHub** | GeyserExtras-Extension.jar](https://github.com/GeyserExtras/GeyserExtras/releases/latest/download/GeyserExtras-Extension.jar)
+        </Admonition>
+
+        :::note
+        如果你使用此方法安装 GeyserExtras，则不需要在后端服务器上也安装 Geyser。
+        :::
+
+        # 操作步骤
+
+        1. 首先设置 [Geyser-Standalone](https://geysermc.org/wiki/geyser/setup/?host=self&platform=standalone#general-setup--configuration)。
+
+        2. 完成后，在你的 Geyser 实例文件夹中找到 `extensions/` 文件夹，并将 `GeyserExtras-Extension.jar` 放入其中。
+
+        3. 现在，运行 Geyser Standalone，扩展应该就可以运行了！
+
+        # Floodgate 设置（可选）
+
+        :::info
+        如果你使用的是模组服务器，并且希望与 GeyserExtras 结合使用 Floodgate，这是推荐的做法。
+        :::
+
+        1. 在你的后端服务器上 [安装 Floodgate](https://geysermc.org/wiki/floodgate/setup)，并从 Floodgate 插件文件夹的根目录复制 `key.pem` 文件到你的 Geyser-Standalone 实例文件夹的根目录。
+        2. 将 Geyser-Standalone 的 `config.yml` 中的 `auth-type` 改为 `floodgate`。
+        3. 重启你的服务器，现在你应该可以用你的 Bedrock Edition 账户登录了！
+    </TabItem>
+
+    <TabItem value="Extension">
+        <Admonition type="tip" icon="&#x1f4e5;&#xfe0e;" title=" 下载">
+            - [**GitHub** | GeyserExtras-Extension.jar](https://github.com/GeyserExtras/GeyserExtras/releases/latest/download/GeyserExtras-Extension.jar)
+        </Admonition>
+
+        :::warning
+        当使用模组平台（如 Forge, Fabric 和 Neoforge）时，GeyserExtras 无法作为 Geyser 扩展运行。
+
+        请使用 **Standalone** 代替。
+        :::
+
+        1. 在你的 Geyser 插件文件夹中找到 `extensions/` 文件夹，并将 `GeyserExtras-Extension.jar` 放入其中。
+
+        2. 现在，启动你的服务器，扩展应该就可以运行了！
+    </TabItem>
+</Tabs>
+
+如果服务器日志看起来像这样：
+```
+[geyserextras] -------------GeyserExtras--------------
+[geyserextras] Version: x.x.x
+[geyserextras] Server Type: SERVER
+[geyserextras] Platform Type: PLATFORM
+
+...
+
+[geyserextras] Done! (#.###s)
+[geyserextras] ---------------------------------------
+```
+那么扩展应该已经安装并运行了。
