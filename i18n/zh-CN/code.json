@@ -110,7 +110,7 @@
     "description": "最新版本建议链接标签"
   },
   "theme.common.editThisPage": {
-    "message": "编辑此页面",
+    "message": "在 GitHub 上编辑此页面",
     "description": "编辑当前页面的链接标签"
   },
   "theme.common.headingLinkTitle": {
