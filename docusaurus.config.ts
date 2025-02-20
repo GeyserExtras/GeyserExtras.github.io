@@ -10,9 +10,9 @@ const config: Config = {
   url: 'https://geyserextras.github_CN.io', // Your website URL
   baseUrl: '/',
   projectName: 'GeyserExtras.github_CN.io',
-  organizationName: 'GeyserExtras',
+  organizationName: 'ning-g-mo',
   trailingSlash: false,
-  deploymentBranch: 'pages',
+  deploymentBranch: 'main',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
