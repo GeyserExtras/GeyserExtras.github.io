@@ -7,10 +7,10 @@ const config: Config = {
   tagline: 'A plugin which attempts to unify features for Bedrock Edition players on Java Edition Servers with GeyserMC, aswell as other handy features for Bedrock Players.',
   favicon: 'img/favicon.ico',
 
-  url: 'https://geyserextras.github_CN.io', // Your website URL
+  url: 'https://geyserextras.github.io', // Your website URL
   baseUrl: '/GeyserExtras_CN.github.io/',
-  projectName: 'GeyserExtras.github_CN.io',
-  organizationName: 'ning-g-mo',
+  projectName: 'GeyserExtras.github.io',
+  organizationName: 'geyserextras',
   trailingSlash: false,
   deploymentBranch: 'main',
 
