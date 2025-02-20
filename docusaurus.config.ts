@@ -12,8 +12,7 @@ const config: Config = {
   projectName: 'GeyserExtras.github_CN.io',
   organizationName: 'GeyserExtras',
   trailingSlash: false,
-  deploymentBranch: 'gh-pages',
-  staticDirectories: ['static'],
+  deploymentBranch: 'pages',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
