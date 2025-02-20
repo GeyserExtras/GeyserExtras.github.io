@@ -8,7 +8,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   url: 'https://geyserextras.github_CN.io', // Your website URL
-  baseUrl: '/',
+  baseUrl: '/GeyserExtras_CN.github.io/',
   projectName: 'GeyserExtras.github_CN.io',
   organizationName: 'ning-g-mo',
   trailingSlash: false,
