@@ -1,0 +1,44 @@
+---
+sidebar_position: 1
+title: "Java版战斗改进"
+description: "音效与材质"
+---
+
+import ReactPlayer from 'react-player'
+import combatsoundsvideo from './assets/combatsounds.mp4'
+
+# Java版战斗改进
+
+## 配置说明
+
+<details>
+<summary>🗎 GE 配置 (config.yml)</summary>
+```yml
+# 启用 Java 版风格攻击冷却指示
+enable-custom-cooldown: true
+
+# 启用 Java 版战斗音效
+enable-java-combat-sounds: true
+```
+</details>
+
+<details>
+<summary>👤&#xfe0e; GE 菜单偏好设置 (preferences/default.json)</summary>
+</details>
+
+## 攻击指示器
+Minecraft Java 版的攻击冷却材质已移植到基岩版客户端。
+
+## 战斗音效
+同步 Java 版战斗音效系统，包含：
+- 不同攻击强度的挥砍音调变化
+- 暴击攻击的特殊音效
+- 横扫攻击的剑气声
+
+## 战斗粒子效果
+通过 [GeyserMC 的可选资源包](https://geysermc.org/wiki/other/geyseroptionalpack) 实现 Java 版战斗粒子，当基岩版玩家加入服务器时会自动下载应用。
+
+## 效果演示
+下方视频展示了启用攻击指示器和战斗音效的效果：
+
+<ReactPlayer className='video-player' controls url={combatsoundsvideo}> </ReactPlayer>

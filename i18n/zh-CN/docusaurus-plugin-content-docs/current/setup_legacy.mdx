@@ -1,0 +1,146 @@
+---
+sidebar_position: 999999999
+title: 旧版安装指南 (v1.1.4)
+---
+
+:::warning
+v1.1.4 及更低版本已停止支持，GeyserExtras v1 版本将不再接收更新或错误修复。
+
+以下信息仅作存档用途。
+:::
+
+# 安装指南
+
+## Spigot/Paper/Purpur 安装
+### 前置需求
+- Geyser-Spigot
+- Floodgate (可选)
+
+### 安装步骤
+1. 将 [GeyserExtras.jar](https://modrinth.com/plugin/geyserextras/version/1.21.0-v1.1.4) 放入 `plugins/` 文件夹
+
+2. 确保配置文件中 `external-address` 和 `external-port` 设置为你的外部 Geyser 地址（通常是给玩家的连接地址）
+
+> 需要至少启动一次服务器以生成配置文件，修改配置后需重启服务器（未来会添加 /reload 命令）
+
+3. 完成！插件应已正常工作
+
+## 代理服务器安装
+### 安装步骤
+1. 在代理端和后端服务器的 `plugins/` 文件夹中都放入 [GeyserExtras.jar](https://modrinth.com/plugin/geyserextras/version/1.21.0-v1.1.4)
+
+2. 启动后端服务器，确保后端配置中 `proxy-mode` 设为 `true`
+
+3. 设置配置文件中的 `external-address` 和 `external-port` 为代理服务器的外部 Geyser 地址
+
+4. [配置代理端 Floodgate](https://github.com/GeyserMC/GeyserWiki/blob/master/_includes/setup/instructions/floodgate/proxy.md)，确保 Floodgate 配置中 `send-floodgate-data` 为 `true`
+
+5. 将后端 GeyserExtras 文件夹中的 `GeyserOptionalPack.mcpack` 和 `GeyserExtrasPack.mcpack` 复制到代理端 Geyser 实例
+
+6. 重启代理端和后端服务器
+
+7. 完成！插件应已正常工作
+
+# 配置说明
+
+> 如果检测到 Geyser-Spigot，所有必需的配置变更将自动应用
+
+# Java 特性兼容
+
+## `enable-custom-cooldown`
+### **需要 Geyser 配置中 `show-cooldown: "false"`**
+#### 值：`true` | `false`
+#### 默认：`true`
+启用自定义冷却时间
+
+## `enable-java-only-block-placement`
+### 需要 Geyser 配置中 `disable-bedrock-scaffolding: true` 来实现正向方块放置
+#### 值：`true` | `false`
+#### 默认：`false`
+强制方块放置不可持续搭桥/脚手架式放置
+
+# 问题修复
+
+## `enable-block-ghosting-fix`
+#### 值：`true` | `false`
+#### 默认：`false`
+每 tick 更新玩家视线内的方块以消除幽灵方块
+
+## `enable-knockback-attack-sprint-fix`
+#### 值：`true` | `false`
+#### 默认：`true`
+启用击退攻击冲刺修复
+
+在 Java 版中，执行击退攻击时玩家会停止冲刺 1 tick。
+基岩版的解决方案是让客户端在一 tick 内显示无饥饿值，但这会暂时使饥饿条显示为空。
+
+# 功能特性
+
+## `auto-reconnect`
+#### 值：`true` | `false`
+#### 默认：`true`
+当服务器关闭或 Geyser 重载时，使用 `external-address` 和 `external-port` 重新连接所有基岩版玩家
+
+## `external-address`
+#### 值：有效 IP 或域名
+#### 默认：`"mc.exampleaddress.net"`
+玩家通过 WAN（非 LAN/本地）连接的基岩版服务器地址，应设置为提供给玩家的连接地址
+
+## `external-port`
+#### 值：0-65535 的整数
+#### 默认：`19132`
+玩家通过 WAN（非 LAN/本地）连接的基岩版服务器端口，应设置为提供给玩家的端口号
+
+## `enable-skin-saving`
+#### 值：`true` | `false`
+#### 默认：`false`
+启用基岩版玩家皮肤保存
+> 注意：此功能仅保存 Floodgate 转换为 Java 版格式的皮肤，部分 128x128 分辨率皮肤、角色创建器皮肤或特殊几何结构的经典皮肤可能无法完全还原
+
+# 快捷菜单
+## `quick-menu-actions`
+
+快捷菜单中显示的操作项（需要插件版 Geyser）
+
+格式：`{标题} >> {命令}`
+
+命令会以玩家身份执行
+
+## 可用占位符
+
+## %player_name% 
+玩家的 Java 版用户名（如：`.Geyser_Extras`），已链接账户时使用 Java 账户名
+
+## %xbox_username%
+玩家的 Xbox 用户名（如：`Geyser Extras`）
+
+## %player_device%
+#### 可能值：`Android` | `iOS` | `Amazon` | `Windows Phone` | `Gear VR` | `Hololens` | `Windows` | `macOS` | `Apple TV` | `PlayStation` | `Switch` | `Xbox` | `Dedicated` | `Unknown`
+玩家当前使用的设备类型
+
+## %player_platform%
+#### 可能值：`Console` | `Mobile` | `PC` | `VR` | `Unknown`
+玩家当前使用的平台类型
+
+## %player_inputtype%
+#### 可能值：`Keyboard` | `Touch` | `Controller` | `VR` | `Unknown`
+玩家当前使用的输入方式
+
+## %player_uiprofile%
+#### 可能值：`Classic` | `Pocket`
+玩家使用的 UI 配置文件类型
+
+#### 默认配置：
+:::warning 注意
+此配置已被翻译，如需查看原文请切换至English！
+:::
+```yml
+quick-menu-actions:
+  - "切换副手物品 >> /geyser offhand"
+  - "切换物品提示 >> /geyser tooltips"
+  - "打开 GeyserExtras 菜单 >> /ge"
+  - "打开成就界面 >> /geyser advancements"
+  - "打开统计界面 >> /geyser statistics"
+  - "玩家列表 >> /playerlist"
+  - "平台列表 >> /platformlist"
+```

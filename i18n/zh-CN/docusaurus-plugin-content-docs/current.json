@@ -1,0 +1,34 @@
+{
+  "version.label": {
+    "message": "下一个",
+    "description": "当前版本的标签"
+  },
+  "sidebar.tutorialSidebar.category.Features": {
+    "message": "特性",
+    "description": "侧边栏教程中的特性类别标签"
+  },
+  "sidebar.tutorialSidebar.category.Features.link.generated-index.title": {
+    "message": "特性",
+    "description": "侧边栏教程中特性类别的生成索引页面标题"
+  },
+  "sidebar.tutorialSidebar.category.GeyserExtrasPack": {
+    "message": "GeyserExtrasPack",
+    "description": "侧边栏教程中GeyserExtrasPack类别的标签"
+  },
+  "sidebar.tutorialSidebar.category.GeyserExtrasPack.link.generated-index.title": {
+    "message": "GeyserExtrasPack",
+    "description": "侧边栏教程中GeyserExtrasPack类别的生成索引页面标题"
+  },
+  "sidebar.tutorialSidebar.category.GeyserExtras Menu": {
+    "message": "GeyserExtras菜单",
+    "description": "侧边栏教程中GeyserExtras菜单类别的标签"
+  },
+  "sidebar.tutorialSidebar.category.GeyserExtras Menu.link.generated-index.title": {
+    "message": "GeyserExtras菜单",
+    "description": "侧边栏教程中GeyserExtras菜单类别的生成索引页面标题"
+  },
+  "sidebar.tutorialSidebar.category.Configuration": {
+    "message": "配置",
+    "description": "侧边栏教程中配置类别的标签"
+  }
+}
