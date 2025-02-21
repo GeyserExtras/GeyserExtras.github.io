@@ -8,9 +8,9 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   url: 'https://geyserextras.github.io', // Your website URL
-  baseUrl: '/GeyserExtras_CN.github.io/',
+  baseUrl: '/',
   projectName: 'GeyserExtras.github.io',
-  organizationName: 'geyserextras',
+  organizationName: 'GeyserExtras',
   trailingSlash: false,
   deploymentBranch: 'main',
 
