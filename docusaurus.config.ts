@@ -12,13 +12,31 @@ const config: Config = {
   projectName: 'GeyserExtras.github.io',
   organizationName: 'GeyserExtras',
   trailingSlash: false,
+  deploymentBranch: 'main',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'zh-CN'],
+    path: 'i18n',
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+        calendar: 'gregory',
+        path: 'en',
+      },
+      'zh-CN': {
+        label: '简体中文',
+        direction: 'ltr',
+        htmlLang: 'zh-CN',
+        calendar: 'gregory',
+        path: 'zh-CN',
+      },
+    },
   },
 
   presets: [
@@ -66,6 +84,10 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Docs',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'left',
         },
         {
           to: 'blog',

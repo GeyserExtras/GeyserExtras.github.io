@@ -1,0 +1,34 @@
+{
+  "link.title.Downloads": {
+    "message": "下载",
+    "description": "页脚链接列的标题，标题为“下载”"
+  },
+  "link.title.Community": {
+    "message": "社区",
+    "description": "页脚链接列的标题，标题为“社区”"
+  },
+  "link.item.label.Modrinth": {
+    "message": "Modrinth",
+    "description": "页脚链接的标签，标签为“Modrinth”，链接到 https://modrinth.com/plugin/geyserextras/"
+  },
+  "link.item.label.Hangar": {
+    "message": "Hangar",
+    "description": "页脚链接的标签，标签为“Hangar”，链接到 https://hangar.papermc.io/GeyserExtras/GeyserExtras/"
+  },
+  "link.item.label.Aternos": {
+    "message": "Aternos",
+    "description": "页脚链接的标签，标签为“Aternos”，链接到 https://aternos.org/addons/a/modrinthbukkit/kOfJBurB"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "页脚链接的标签，标签为“GitHub”，链接到 https://github.com/GeyserExtras/GeyserExtras/"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "页脚链接的标签，标签为“Discord”，链接到 https://discord.gg/2FfuShKQgy"
+  },
+  "copyright": {
+    "message": "版权所有 © 2025 LetsGoAway。与GeyserMC项目无关联。此网站基于Docusaurus构建。",
+    "description": "页脚版权声明"
+  }
+}
